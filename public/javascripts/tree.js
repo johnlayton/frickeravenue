@@ -17,7 +17,9 @@ var vis = d3.select("#chart").append("svg")
   .append("g")
   .attr("transform", "translate(" + m[3] + "," + m[0] + ")");
 
-d3.json("/json/tree.json", function(json) {
+d3.json("/task/json", function(json) {
+  
+  console.log(" loaded ... ");
 
   root = json;
   root.x0 = h / 2;
